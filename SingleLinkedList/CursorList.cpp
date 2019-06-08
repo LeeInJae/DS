@@ -120,7 +120,7 @@ void CursorList::Terminate() {
 
 }
 
-int Search(int data) {
+int CursorList::Search(const int data) {
     int index = head;
     while(index != -1) {
         if (datas[index].data == data) {
