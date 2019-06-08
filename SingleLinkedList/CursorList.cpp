@@ -79,7 +79,7 @@ void CursorList::RemoveRear() {
         return;
     }
 
-    if (datas[head].deleteNext == -1) {
+    if (datas[head].next == -1) {
         RemoveFront();
         return;
     }
