@@ -120,6 +120,15 @@ void CursorList::Terminate() {
 
 }
 
-void Search(int data) {
-
+int Search(int data) {
+    int index = head;
+    while(index != -1) {
+        if (datas[index].data == data) {
+            return index;
+        }
+        
+        index = datas[index].next;
+    }
+    
+    return -1;
 }
