@@ -19,7 +19,7 @@ public:
     void InsertRear(const int data);
     void RemoveFront();
     void RemoveRear();
-    void Search();
+    int Search();
     void Clear();
     void PrintAll();
     void Terminate();
