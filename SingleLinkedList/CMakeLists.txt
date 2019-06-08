@@ -3,4 +3,4 @@ project(algorithm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SingleLinkedList main.cpp List.cpp List.h data.h CursorList.cpp CursorList.h)
+add_executable(SingleLinkedList main.cpp List.cpp List.h data.h CursorList.cpp CursorList.h DoubleLinkedList.cpp DoubleLinkedList.h)

@@ -23,4 +23,11 @@ struct CursorNode {
     int next;
     int deleteNext;
 };
+
+struct DNode {
+    DNode() = default;
+    DNode* prev = nullptr;
+    DNode* next = nullptr;
+    int data;
+};
 #endif //ALGORITHM_DATA_H

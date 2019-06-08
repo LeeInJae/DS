@@ -1,6 +1,7 @@
 #include <iostream>
 #include "List.h"
 #include "CursorList.h"
+#include "DoubleLinkedList.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -29,23 +30,35 @@ int main() {
     delete list;
     */
 
-    CursorList* list = new CursorList(5);
+    DoubleLinkedList* list = new DoubleLinkedList;
     list->RemoveFront();
     list->InsertFront(3);
-    list->PrintAll();
+    list->Print();
     list->InsertFront(5);
-    list->PrintAll();
+    list->Print();
     list->InsertFront(1);
-    list->PrintAll();
+    list->Print();
     list->InsertFront(2);
-    list->PrintAll();
+    list->Print();
     list->RemoveFront();
-    list->PrintAll();
+    list->Print();
     list->RemoveRear();
-    list->PrintAll();
+    list->Print();
     list->Clear();
-    list->PrintAll();
+    list->Print();
     list->RemoveRear();
     list->RemoveRear();
+    list->InsertFront(100);
+    list->InsertFront(200);
+    list->InsertFront(300);
+    list->InsertFront(400);
+    list->InsertFront(500);
+    list->InsertRear(200);
+    list->InsertRear(300);
+    list->InsertRear(400);
+    list->InsertRear(500);
+    list->InsertRear(600);
+    list->Print();
+    list->PrintReverse();
     return 0;
 }

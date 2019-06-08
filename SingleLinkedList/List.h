@@ -26,6 +26,4 @@ private:
     Node* head = nullptr;
     Node* tail = nullptr;
 };
-
-
 #endif //ALGORITHM_LIST_H
