@@ -3,39 +3,23 @@
 #include "CursorList.h"
 #include "DoubleLinkedList.h"
 #include "../BST/BST.h"
+#include "../Hash/OpenAddressHash.h"
 
 int main() {
-    BST* bst = new BST;
+    OpenAddressHash* hash = new OpenAddressHash(13);
+    hash->Add(Data(14));
+    hash->Add(Data(29));
+    hash->Add(Data(5));
+    hash->Add(Data(6));
+    hash->Add(Data(34));
+    hash->Add(Data(75));
+    hash->Add(Data(37));
+    hash->Add(Data(51));
+    hash->Dump();
+    hash->Add(Data(18));
+    hash->Dump();
+    delete hash;
 
-    bst->Add(6);
-    bst->Add(2);
-    bst->Add(1);
-    bst->Add(4);
-    bst->Add(3);
-    bst->Add(5);
-    bst->Add(7);
-    bst->Add(8);
-    bst->Add(9);
-    bst->PrintAll();
-
-    bst->Remove(7);
-    bst->PrintAll();
-
-    bst->Remove(2);
-    bst->PrintAll();
-    std::cout << "end";
-    /*
-    bst->Add(1);
-    bst->Add(2);
-    bst->Add(3);
-    bst->PrintAll();
-    bst->Remove(2);
-    bst->PrintAll();
-*/
-    //bst->Remove(2);
-    //bst->PrintAll();
-    //bst->Remove(6);
-    //bst->PrintAll();
 
 
     return 0;
