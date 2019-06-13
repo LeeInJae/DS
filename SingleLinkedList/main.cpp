@@ -5,10 +5,10 @@
 #include "../BST/BST.h"
 #include "../Hash/OpenAddressHash.h"
 #include "../KMP/KMP.h"
-
+#include "../BoyerMoore/BoyerMoore.h"
 int main() {
-    KMP kmp("ABCABDBDBDCAB", "BD");
-    kmp.findIndex();
+    BoyerMoore boyerMoore("ABCABDBDBDCAB", "BD");
+    boyerMoore.GetMatchingIndexes();
 
     return 0;
 }
