@@ -7,36 +7,39 @@
 #include "../KMP/KMP.h"
 #include "../BoyerMoore/BoyerMoore.h"
 #include "../Set/Set.h"
+#include "../Set/BitSet.h"
 
 int main() {
-    Set s1(10);
-    s1.Add(3);
-    s1.Add(4);
-    s1.Add(5);
-    s1.Add(2);
-    s1.Add(7);
-    s1.Add(8);
-    s1.Add(9);
-    s1.Add(0);
+    BitSet s1;
     s1.Add(1);
-    s1.Add(100);
-    s1.Add(200);
+    s1.Add(3);
     s1.Print();
+    std::cout << "size=  " << s1.Size()  << std::endl;
 
-    Set s2(3);
+    s1.Add(13);
+    s1.Add(17);
+    s1.Add(22);
+    s1.Add(5);
+    s1.Add(0);
+    s1.Add(31);
+
+    s1.Print();
+    std::cout << "size=  " << s1.Size()  << std::endl;
+
+    BitSet s2;
     s2.Add(1);
-    s2.Add(7);
-    s2.Add(3);
+    s2.Add(5);
 
+    s1.Difference(s2);
     s1.Print();
+    std::cout << "size=  " << s1.Size()  << std::endl;
 
-    Set s3(10);
-    s3.Union(s2);
-    s3.Print();
-    s3.Union(s1);
-    s3.Print();
-    std::cout << "=====" << std::endl;
-    s3.Difference(s2);
-    s3.Print();
+    BitSet s3;
+    s3.Add(1);
+    s3.Add(5);
+
+    if(s3.IsEqual(s2)) {
+        std::cout << "s3 and s2 is equal" << std::endl;
+    }
     return 0;
 }
