@@ -9,10 +9,11 @@
 #include "../Set/Set.h"
 #include "../Set/BitSet.h"
 #include "../Euclidean/EuclideanMethod.h"
+#include "../Hanoi/Hanoi.h"
 
 int main() {
-    EuclideanMethod gcd(42, 6);
+    Hanoi hanoi;
 
-    std::cout << gcd.getGCD() << std::endl;
+    hanoi.move(3, 1, 3);
     return 0;
 }
