@@ -10,10 +10,12 @@
 #include "../Set/BitSet.h"
 #include "../Euclidean/EuclideanMethod.h"
 #include "../Hanoi/Hanoi.h"
+#include "../NQueen.h"
 
 int main() {
-    Hanoi hanoi;
+    NQueen nQueen;
 
-    hanoi.move(3, 1, 3);
+    nQueen.Nqueen(0);
+    std::cout << "tot = " << nQueen.tot;
     return 0;
 }
