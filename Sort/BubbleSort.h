@@ -9,7 +9,7 @@
 
 class BubbleSort {
 public:
-    BubbleSort(const std::vector<int>&& data) : data_(std::move(data)) {
+    BubbleSort(std::vector<int>&& data) : data_(std::move(data)) {
 
     }
 

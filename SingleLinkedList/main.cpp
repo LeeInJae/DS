@@ -12,10 +12,10 @@
 #include "../Hanoi/Hanoi.h"
 #include "../NQueen.h"
 #include "../Sort/BubbleSort.h"
+#include "../Sort/SelectionSort.h"
 
 int main() {
-    BubbleSort bubbleSort(std::vector<int>{3, 10, 45, 100, 20});
-    bubbleSort.Sort();
-    bubbleSort.Sort2();
+    SelectionSort selectionSort(std::vector<int>{100,3,2,5,7,1020,30});
+    selectionSort.Sort();
     return 0;
 }
