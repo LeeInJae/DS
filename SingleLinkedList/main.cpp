@@ -11,11 +11,11 @@
 #include "../Euclidean/EuclideanMethod.h"
 #include "../Hanoi/Hanoi.h"
 #include "../NQueen.h"
+#include "../Sort/BubbleSort.h"
 
 int main() {
-    NQueen nQueen;
-
-    nQueen.Nqueen(0);
-    std::cout << "tot = " << nQueen.tot;
+    BubbleSort bubbleSort(std::vector<int>{3, 10, 45, 100, 20});
+    bubbleSort.Sort();
+    bubbleSort.Sort2();
     return 0;
 }
