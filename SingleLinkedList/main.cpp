@@ -17,12 +17,10 @@
 #include "../Sort/ShellSort.h"
 #include "../Sort/QuickSort.h"
 #include "../Sort/MergeSort.h"
+#include "../Sort/Heap.h"
 
 int main() {
-    MergeSort mergeSort(std::vector<int>{100,3,2,5,7,1020,30});
-    mergeSort.Sort();
-
-    QuickSort quickSort(std::vector<int>{100,3,2,5,7,1020,30});
-    quickSort.Quick();
+    Heap heap(std::vector<int>{100,3,2,5,7,1020,30});
+    heap.Sort();
     return 0;
 }
