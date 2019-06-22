@@ -14,9 +14,15 @@
 #include "../Sort/BubbleSort.h"
 #include "../Sort/SelectionSort.h"
 #include "../Sort/InsertionSort.h"
+#include "../Sort/ShellSort.h"
+#include "../Sort/QuickSort.h"
+#include "../Sort/MergeSort.h"
 
 int main() {
-    InsertionSort insertionSort(std::vector<int>{100,3,2,5,7,1020,30});
-    insertionSort.Sort();
+    MergeSort mergeSort(std::vector<int>{100,3,2,5,7,1020,30});
+    mergeSort.Sort();
+
+    QuickSort quickSort(std::vector<int>{100,3,2,5,7,1020,30});
+    quickSort.Quick();
     return 0;
 }
