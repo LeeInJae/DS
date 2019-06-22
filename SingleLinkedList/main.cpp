@@ -18,9 +18,10 @@
 #include "../Sort/QuickSort.h"
 #include "../Sort/MergeSort.h"
 #include "../Sort/Heap.h"
+#include "../Sort/fsort.h"
 
 int main() {
-    Heap heap(std::vector<int>{100,3,2,5,7,1020,30});
-    heap.Sort();
+    Fsort fsort(std::vector<int>{10, 10 ,1, 2, 3, 1, 2, 6, 6, 8, 89 , 100});
+    fsort.Sort(100);
     return 0;
 }
