@@ -19,9 +19,46 @@
 #include "../Sort/MergeSort.h"
 #include "../Sort/Heap.h"
 #include "../Sort/fsort.h"
+#include "../Stack/Stack.h"
 
 int main() {
-    Fsort fsort(std::vector<int>{10, 10 ,1, 2, 3, 1, 2, 6, 6, 8, 89 , 100});
-    fsort.Sort(100);
+    Stack stack(5);
+    stack.Push(1);
+    stack.Push(2);
+    stack.Push(3);
+    stack.Push(4);
+    stack.Push(5);
+    stack.Push(6);
+    stack.Print();
+    const auto data1 = stack.Pop();
+    std::cout << "pop1 = " << data1 << std::endl;
+    stack.Print();
+    if(stack.IsFull()) {
+        std::cout << "stack is full" << std::endl;
+    } else {
+        std::cout << "stack isn't full" << std::endl;
+    }
+
+    stack.Pop();
+    stack.Pop();
+    stack.Pop();
+    stack.Pop();
+    stack.Pop();
+    stack.Push(100);
+    stack.Push(200);
+    stack.Print();
+    const auto data2 = stack.Peek();
+    std::cout << "peak1 = " << data2 << std::endl;
+    stack.Print();
+
+    stack.Pop();
+    stack.Pop();
+    stack.Pop();
+    stack.Pop();
+    if(stack.IsEmpty()) {
+        std::cout << "stack is empty" << std::endl;
+    } else {
+        std::cout << "stack isn't empty" << std::endl;
+    }
     return 0;
 }
